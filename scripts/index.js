@@ -1,5 +1,3 @@
-const { Script } = require("vm");
-
 web3 = new Web3(new Web3.provieders.HttpProvider("http://localhost:8545"));
 var contract = web3.eth.Contract([
     {
