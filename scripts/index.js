@@ -656,8 +656,10 @@ function lookUp(){
 }
 
 function create(){
+  alert("스킨 생성 완료");
   var skinName = document.create.skinName.value;
   var skinUrl = document.create.skinUrl.value;
   contract.methods._createSkin(skinName,skinUrl).call();
-  alert("스킨 생성 완료");
+
+  console.log(contract.methods.getSkinsNumberByOwner().call());
 }
