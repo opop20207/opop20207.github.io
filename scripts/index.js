@@ -1,3 +1,5 @@
+const { Script } = require("vm");
+
 web3 = new Web3(new Web3.provieders.HttpProvider("http://localhost:8545"));
 var contract = web3.eth.Contract([
     {
@@ -651,4 +653,11 @@ var contract = web3.eth.Contract([
 
 function lookUp(){
   
+}
+
+function create(){
+  var skinName = document.create.skinName.value;
+  var skinUrl = document.create.skinUrl.value;
+  contract.methods._createSkin(skinName,skinUrl).call();
+  alert("스킨 생성 완료");
 }
